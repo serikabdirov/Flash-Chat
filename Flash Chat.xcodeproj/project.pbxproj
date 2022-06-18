@@ -56,6 +56,9 @@
 		72B3A38D285E30CC00A4D58C /* Flash Chat */ = {
 			isa = PBXGroup;
 			children = (
+				72B3A3A4285E30EC00A4D58C /* Controller */,
+				72B3A3A3285E30E600A4D58C /* View */,
+				72B3A3A2285E30D800A4D58C /* Model */,
 				72B3A38E285E30CC00A4D58C /* AppDelegate.swift */,
 				72B3A390285E30CC00A4D58C /* SceneDelegate.swift */,
 				72B3A392285E30CC00A4D58C /* ViewController.swift */,
@@ -65,6 +68,27 @@
 				72B3A39C285E30CD00A4D58C /* Info.plist */,
 			);
 			path = "Flash Chat";
+			sourceTree = "<group>";
+		};
+		72B3A3A2285E30D800A4D58C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		72B3A3A3285E30E600A4D58C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		72B3A3A4285E30EC00A4D58C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
