@@ -16,9 +16,12 @@
 		72B3A3A8285E31C100A4D58C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3A3A7285E31C100A4D58C /* RegisterViewController.swift */; };
 		72B3A3AA285E31FD00A4D58C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3A3A9285E31FD00A4D58C /* LoginViewController.swift */; };
 		72B3A3AC285E321400A4D58C /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3A3AB285E321400A4D58C /* ChatViewController.swift */; };
+		72B3A3AE285F3A9E00A4D58C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72B3A3AD285F3A9E00A4D58C /* GoogleService-Info.plist */; };
+		B04B723331B88005C268A24C /* Pods_Flash_Chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E848C0A70E50451597DBF6 /* Pods_Flash_Chat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C96F46CEF1E641AFC95E2ED /* Pods-Flash Chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flash Chat.release.xcconfig"; path = "Target Support Files/Pods-Flash Chat/Pods-Flash Chat.release.xcconfig"; sourceTree = "<group>"; };
 		72B3A38B285E30CC00A4D58C /* Flash Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flash Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72B3A38E285E30CC00A4D58C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72B3A390285E30CC00A4D58C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +33,9 @@
 		72B3A3A7285E31C100A4D58C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		72B3A3A9285E31FD00A4D58C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		72B3A3AB285E321400A4D58C /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		72B3A3AD285F3A9E00A4D58C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		78BA42081A95CB5F0533913F /* Pods-Flash Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flash Chat.debug.xcconfig"; path = "Target Support Files/Pods-Flash Chat/Pods-Flash Chat.debug.xcconfig"; sourceTree = "<group>"; };
+		D5E848C0A70E50451597DBF6 /* Pods_Flash_Chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flash_Chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B04B723331B88005C268A24C /* Pods_Flash_Chat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +55,8 @@
 			children = (
 				72B3A38D285E30CC00A4D58C /* Flash Chat */,
 				72B3A38C285E30CC00A4D58C /* Products */,
+				BC0A97C3847139C6B861B998 /* Pods */,
+				AC51AB0F8CC68D7AEE3B1007 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +78,7 @@
 				72B3A390285E30CC00A4D58C /* SceneDelegate.swift */,
 				72B3A397285E30CD00A4D58C /* Assets.xcassets */,
 				72B3A399285E30CD00A4D58C /* LaunchScreen.storyboard */,
+				72B3A3AD285F3A9E00A4D58C /* GoogleService-Info.plist */,
 				72B3A39C285E30CD00A4D58C /* Info.plist */,
 			);
 			path = "Flash Chat";
@@ -100,6 +110,23 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		AC51AB0F8CC68D7AEE3B1007 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5E848C0A70E50451597DBF6 /* Pods_Flash_Chat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC0A97C3847139C6B861B998 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78BA42081A95CB5F0533913F /* Pods-Flash Chat.debug.xcconfig */,
+				2C96F46CEF1E641AFC95E2ED /* Pods-Flash Chat.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -107,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 72B3A39F285E30CD00A4D58C /* Build configuration list for PBXNativeTarget "Flash Chat" */;
 			buildPhases = (
+				222E19137B4E59B02BCFF841 /* [CP] Check Pods Manifest.lock */,
 				72B3A387285E30CC00A4D58C /* Sources */,
 				72B3A388285E30CC00A4D58C /* Frameworks */,
 				72B3A389285E30CC00A4D58C /* Resources */,
+				5CC044CF08D9CDE635ABEF0D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,12 +188,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				72B3A39B285E30CD00A4D58C /* LaunchScreen.storyboard in Resources */,
+				72B3A3AE285F3A9E00A4D58C /* GoogleService-Info.plist in Resources */,
 				72B3A398285E30CD00A4D58C /* Assets.xcassets in Resources */,
 				72B3A396285E30CC00A4D58C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		222E19137B4E59B02BCFF841 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Flash Chat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CC044CF08D9CDE635ABEF0D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Flash Chat/Pods-Flash Chat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Flash Chat/Pods-Flash Chat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Flash Chat/Pods-Flash Chat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		72B3A387285E30CC00A4D58C /* Sources */ = {
@@ -318,6 +390,7 @@
 		};
 		72B3A3A0285E30CD00A4D58C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78BA42081A95CB5F0533913F /* Pods-Flash Chat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -346,6 +419,7 @@
 		};
 		72B3A3A1285E30CD00A4D58C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C96F46CEF1E641AFC95E2ED /* Pods-Flash Chat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
