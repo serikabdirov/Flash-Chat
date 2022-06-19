@@ -23,7 +23,7 @@ class RegisterViewController: UIViewController {
                 alert.addAction(UIAlertAction(title: "Ok", style: .default))
                 self.present(alert, animated: true)
             } else {
-                self.performSegue(withIdentifier: "RegisterToChat", sender: self)
+                self.performSegue(withIdentifier: Constants.registerSegue, sender: self)
             }
         }
     }

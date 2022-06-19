@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
                 alert.addAction(UIAlertAction(title: "Ok", style: .default))
                 strongSelf.present(alert, animated: true)
             } else {
-                strongSelf.performSegue(withIdentifier: "LoginToChat", sender: strongSelf)
+                strongSelf.performSegue(withIdentifier: Constants.loginSegue, sender: strongSelf)
             }
         }
     }
