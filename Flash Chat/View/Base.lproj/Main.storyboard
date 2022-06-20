@@ -184,7 +184,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3pO-1q-qdx">
-                                <rect key="frame" x="0.0" y="88" width="414" height="714"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="802"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZI7-BY-RaL">
@@ -230,7 +230,7 @@
                         <constraints>
                             <constraint firstItem="ZI7-BY-RaL" firstAttribute="top" secondItem="3pO-1q-qdx" secondAttribute="bottom" id="7EE-jA-Kmt"/>
                             <constraint firstItem="ZI7-BY-RaL" firstAttribute="trailing" secondItem="o0f-fT-aet" secondAttribute="trailing" id="7ZU-sn-Yxs"/>
-                            <constraint firstItem="3pO-1q-qdx" firstAttribute="top" secondItem="o0f-fT-aet" secondAttribute="top" id="9bj-DL-8Sl"/>
+                            <constraint firstItem="3pO-1q-qdx" firstAttribute="top" secondItem="o0f-fT-aet" secondAttribute="top" constant="-88" id="9bj-DL-8Sl"/>
                             <constraint firstItem="ZI7-BY-RaL" firstAttribute="leading" secondItem="o0f-fT-aet" secondAttribute="leading" id="VMT-nZ-OfH"/>
                             <constraint firstItem="o0f-fT-aet" firstAttribute="bottom" secondItem="ZI7-BY-RaL" secondAttribute="bottom" id="nbJ-Oi-fjS"/>
                             <constraint firstItem="3pO-1q-qdx" firstAttribute="trailing" secondItem="o0f-fT-aet" secondAttribute="trailing" id="tip-Yc-wew"/>
@@ -267,7 +267,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="jgE-17-KGL">
                                         <rect key="frame" x="0.0" y="20" width="414" height="137"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="sm@gmail.com" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x1H-Z4-hfU">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x1H-Z4-hfU">
                                         <rect key="frame" x="49" y="51" width="317" height="45"/>
                                         <color key="textColor" name="BrandBlue"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -292,7 +292,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="9J2-0r-14M">
                                         <rect key="frame" x="0.0" y="20" width="414" height="137"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1234567" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8oa-5f-9O5">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8oa-5f-9O5">
                                         <rect key="frame" x="49" y="48" width="317" height="45"/>
                                         <color key="textColor" name="BrandBlue"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -356,6 +356,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7fh-48-d4C">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="compactScrollEdgeAppearance"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
