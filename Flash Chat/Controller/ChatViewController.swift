@@ -44,12 +44,17 @@ class ChatViewController: UIViewController {
                 if let snapshotDocuments = querySnapshot?.documents {
                     for doc in snapshotDocuments {
                         let data = doc.data()
-                        if let messageSender = data[Constants.FStore.senderField] as? String, let messageBody = data[Constants.FStore.bodyField] as? String {
+                        if let messageSender = data[Constants.FStore.senderField] as? String,
+                            let messageBody = data[Constants.FStore.bodyField] as? String
+                        {
                             let newMessage = Message(sender: messageSender, body: messageBody)
                             self.messages.append(newMessage)
 
+                            let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+
                             DispatchQueue.main.async {
                                 self.tableView.reloadData()
+                                self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
                             }
                         }
 
@@ -72,13 +77,15 @@ class ChatViewController: UIViewController {
                         alert.addAction(UIAlertAction(title: "Ok", style: .default))
                         self.present(alert, animated: true)
                     } else {
-                        print("success")
+                        DispatchQueue.main.async {
+                            self.messageTextfield.text = ""
+                        }
                     }
                 }
             }
         }
 
-        messageTextfield.text = ""
+
 
     }
 
@@ -96,8 +103,27 @@ class ChatViewController: UIViewController {
 
 extension ChatViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let message = messages[indexPath.row]
+
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! MessageCell
-        cell.messageLabel.text = messages[indexPath.row].body
+        cell.messageLabel.text = message.body
+        cell.userName.text = message.sender
+
+        if message.sender == Auth.auth().currentUser?.email {
+            cell.leftAvatarImageView.isHidden = true
+            cell.rightAvatarImageView.isHidden = false
+            cell.messageBubble.backgroundColor = UIColor(named: Constants.BrandColors.lightPurple)
+            cell.messageLabel.textColor = UIColor(named: Constants.BrandColors.purple)
+            cell.userName.textColor = UIColor(named: Constants.BrandColors.purple)
+        } else {
+            cell.leftAvatarImageView.isHidden = false
+            cell.rightAvatarImageView.isHidden = true
+            cell.messageBubble.backgroundColor = UIColor(named: Constants.BrandColors.purple)
+            cell.messageLabel.textColor = UIColor(named: Constants.BrandColors.lightPurple)
+            cell.userName.textColor = UIColor(named: Constants.BrandColors.lightPurple)
+        }
+
+
         return cell
     }
 
